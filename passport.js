@@ -9,7 +9,7 @@ passport.use(new BearerStrategy(
         redisClient.get(token, function (err, accountData) {
             if (err) return done(err);
             if (!accountData) return done(null, false, { message: "No account data" });
-            return done(null, jwt.verify(token, process.env.JWT_SECRET || "molotov#777"));
+            return done(null, jwt.verify(token, process.env.JWT_SECRET || "mystrongsecrethere"));
         });
     }
 ));
