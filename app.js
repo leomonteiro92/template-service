@@ -28,9 +28,9 @@ var models = glob.sync('./models/*.js');
 models.forEach(function (model) {
   require(model);
 });
-var controllers = glob.sync('./controllers/*.js');
-controllers.forEach(function (controller) {
-  require(controller)(app);
+var routes = glob.sync('./routes/*.js');
+routes.forEach(function (route) {
+  require(route)(app);
 });
 
 app.listen(config.server.port, function () {
