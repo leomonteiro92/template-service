@@ -1,6 +1,6 @@
 FROM node:argon
 
-MAINTAINER SocialTicket Team
+MAINTAINER leomonteiro92@gmail.com
 
 RUN useradd --user-group --create-home --shell /bin/false app & npm install --global npm@3.7.5
 
